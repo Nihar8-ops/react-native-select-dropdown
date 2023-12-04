@@ -158,7 +158,7 @@ const SelectDropdown = (
             <View style={styles.dropdownCustomizedRowParent}>{renderCustomizedRowChild(item, index, isSelected)}</View>
           ) : (
             <Text
-              numberOfLines={1}
+              numberOfLines={numberOfLines ? numberOfLines : 1}
               allowFontScaling={false}
               style={mergeStyles(styles.dropdownRowText, rowTextStyle, isSelected && selectedRowTextStyle)}>
               {rowTextForSelection ? rowTextForSelection(item, index) : item.toString()}
